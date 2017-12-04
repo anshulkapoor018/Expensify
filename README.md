@@ -1,7 +1,8 @@
 # Expensify-React-App
-A basic ReactJS website for making Fun Decisions Randomly
+A basic ReactJS web app for managing Expenses 
 
-Project will run on development Server
+Note: Project will run on development Server
+
 ***Run Command in terminal ***
 
 yarn run dev-server
