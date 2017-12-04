@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 //CSS
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -29,16 +29,37 @@ const helpPage = () => (
     </div>
 );
 
+const notFoundPage = () => (
+    <div>
+        Error 404
+        
+    </div>
+);
+
+const Header = () => (
+    <header>
+        <h1>Expensify</h1>
+        <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink> &nbsp;
+        <NavLink to="/add" activeClassName="is-active">Add</NavLink> &nbsp;
+        <NavLink to="/edit" activeClassName="is-active">Edit</NavLink> &nbsp;
+        <NavLink to="/help" activeClassName="is-active">Help</NavLink>
+    </header>
+);
+
 const routes = (
     <BrowserRouter>
         <div>
-            <Route path="/" component={expenseDashboardPage} exact={true}/>
-            <Route path="/add" component={addExpensePage} exact={true}/>
-            <Route path="/edit" component={editExpensePage} exact={true}/>
-            <Route path="/help" component={helpPage} exact={true}/>  
+            <Header/>
+            <Switch>
+                <Route path="/" component={expenseDashboardPage} exact={true}/>
+                <Route path="/add" component={addExpensePage}/>
+                <Route path="/edit" component={editExpensePage}/>
+                <Route path="/help" component={helpPage}/>
+                <Route component={notFoundPage} />            
+            </Switch>
         </div>
+        
     </BrowserRouter>
 );
-
 
 ReactDOM.render(routes, document.getElementById('app'))
