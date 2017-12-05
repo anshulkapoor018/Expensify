@@ -1,12 +1,12 @@
 import React from 'react';
 
-const editExpensePage = (props) => {
-    console.log(props);
-    return (
-        <div>
-            This is Edit Expense.
-        </div>
-    );
-}
+const EditExpensePage = (props) => {
+  console.log(props);
+  return (
+    <div>
+      Editing the expense with id of {props.match.params.id}
+    </div>
+  );
+};
 
-export default editExpensePage;
+export default EditExpensePage;

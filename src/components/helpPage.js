@@ -1,9 +1,9 @@
 import React from 'react';
 
-const helpPage = () => (
-    <div>
-        This is Help Page for Expense App.
-    </div>
+const HelpPage = () => (
+  <div>
+    This is from my help component
+  </div>
 );
 
-export default helpPage;
+export default HelpPage;
