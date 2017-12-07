@@ -5,5 +5,10 @@ Note: Project will run on development Server
 
 ***Run Command in terminal ***
 
-Run the APP : yarn run dev-server
-Run the Test cases : yarn run test
+Run the APP: 
+
+yarn run dev-server
+
+Run the Test cases: 
+
+yarn run test
