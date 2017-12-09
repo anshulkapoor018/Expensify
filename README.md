@@ -11,4 +11,4 @@ yarn run dev-server
 
 Run the Test cases: 
 
-yarn run test
+yarn test -- --watch
